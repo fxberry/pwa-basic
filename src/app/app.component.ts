@@ -5,7 +5,6 @@ import { PromptUpdateService } from './prompt-update.service';
 import { HttpClient } from '@angular/common/http';
 import { WebNotificationService } from './web-notification.service';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',

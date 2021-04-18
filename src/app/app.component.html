@@ -2,6 +2,21 @@
   <h1>
     Welcome to {{ title }}! V3
   </h1>
+
+  <h2>Caching</h2>
+
+  <dl>
+    <dt>No Configuration</dt>
+    <dd>{{date$ | async}}</dd>
+    <dt>Performance</dt>
+    <dd>{{secondDate$ | async}}</dd>
+    <dt>Freshness</dt>
+    <dd>{{thirdDate$ | async}}</dd>
+  </dl>
+  <div>
+    <button (click)="refresh()">Refresh</button>
+  </div>
+
   <button (click)="notify()">notify!</button>
 </div>
 

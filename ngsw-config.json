@@ -26,5 +26,26 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "cached",
+      "urls": ["/second"],
+      "cacheConfig": {
+        "maxSize": 1,
+        "maxAge": "100s",
+        "strategy": "performance"
+      }
+    },
+    {
+      "name": "cached",
+      "urls": ["/third"],
+      "cacheConfig": {
+        "maxSize": 1,
+        "timeout": "500u",
+        "maxAge": "100s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }

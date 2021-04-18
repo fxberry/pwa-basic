@@ -14,7 +14,7 @@ export class WebNotificationService {
 
   subscribeToNotification() {
     this.swPush.requestSubscription(
-      {serverPublicKey: 'BL5nC-N8lmUe8dqnYtgqLFJWtNPt28A8Xp4oY3ka82QUY0H4Jx3kD_rRrvfK9QvC2Ig4KZVNI9kPBL3860GKAjg' })
+      {serverPublicKey: 'BFCksJuTRPyjcCFui6BpFkPOgsRxRG7E4dJUMn9v0HH_hKD8t8qTdGJc4_kPLpsE8RW0E3g-m8596hsalBkLSzU' })
       .then((sub) => {
         console.log('PUSH SUB: ', sub);
         this.registerOnServer(sub);

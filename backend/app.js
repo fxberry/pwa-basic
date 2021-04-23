@@ -23,12 +23,22 @@ const webpush = require('web-push');
 // var pushSubscription = null;
 var pushSubscriptions = [];
 
-const publicVapidKey = 'BL5nC-N8lmUe8dqnYtgqLFJWtNPt28A8Xp4oY3ka82QUY0H4Jx3kD_rRrvfK9QvC2Ig4KZVNI9kPBL3860GKAjg';
-const privateVapidKey = 'TrIOE8w79VvFvSxx2eJSBWLW4atlElpGozln4UpjFJU';
+const publicVapidKey = 'BFCksJuTRPyjcCFui6BpFkPOgsRxRG7E4dJUMn9v0HH_hKD8t8qTdGJc4_kPLpsE8RW0E3g-m8596hsalBkLSzU';
+const privateVapidKey = 'fjZWj2STd1Ypv1qChE60eX8V32hnHt4_gecFtfUGSfk';
 
 webpush.setVapidDetails('mailto:fx.egli@gmail.com', publicVapidKey, privateVapidKey);
 
 app.use(require('body-parser').json());
+
+var apiFunction = function (req, res) {
+  setTimeout(() => res.send(new Date()), 1000);
+}
+
+app.get('/first', apiFunction);
+
+app.get('/second', apiFunction);
+
+app.get('/third', apiFunction);
 
 app.post('/subscribe', (req, res) => {
   // pushSubscription = req.body;
